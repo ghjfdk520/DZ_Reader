@@ -21,7 +21,9 @@ public class Config {
 
 
     //有道翻译接口 http://fanyi.youdao.com/openapi.do?keyfrom=fanyiweb&type=selector&version=1.2&select=off&translate=on"
-    public static String youdaoWordApi = "http://fanyi.youdao.com/openapi.do?keyfrom=limivideo&key=1746822210&type=data&doctype=json&version=1.1";
+    public static String youdaoWordApi = "http://fanyi.youdao.com/appapi/translate";
+    //有道翻译发音接口 http://dict.youdao.com/dictvoice?audio=translate&le=eng
+    public static String youdaoVoice = "http://dict.youdao.com/dictvoice?le=eng&audio=";
     static {
         LogUtils.configTagPrefix = TAG;
     }

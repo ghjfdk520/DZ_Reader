@@ -1,0 +1,7 @@
+<resources>
+
+    <!--54%度黑-->
+    <color name="black_tint">#89000000</color>
+    <!--87%度黑-->
+    <color name="black_deep">#DD000000</color>
+</resources>

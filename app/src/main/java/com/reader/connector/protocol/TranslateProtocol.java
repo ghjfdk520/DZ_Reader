@@ -34,15 +34,11 @@ public class TranslateProtocol {
     }
     //有道翻译接口
     public static long youdaoTransLate(String word, HttpCallBack callBack) {
-        LinkedHashMap < String, Object > entity = new LinkedHashMap<String, Object>();
-        entity.put("q", word);
-        String url = Config.voaWordApi +word;
-
+        LinkedHashMap< String , Object > entity = new LinkedHashMap< String , Object >( );
+        entity.put( "q" , word);
+        entity.put( "doctype" , "json");
         return TranslateProtocolXml(Config.youdaoWordApi, entity, callBack);
-
     }
-
-
     //百度翻译接口
     public static long bdTransLate(String word, HttpCallBack callBack) {
         LinkedHashMap < String, Object > entity = new LinkedHashMap<String, Object>();

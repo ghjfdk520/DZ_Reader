@@ -11,15 +11,19 @@ public class Dispatcher {
     private final Bus bus;
     private static Dispatcher instance;
 
-    public static Dispatcher get(Bus bus) {
+    public static Dispatcher getInstance() {
         if (instance == null) {
-            instance = new Dispatcher(bus);
+            synchronized (Dispatcher.class) {
+                if (instance == null)
+                 instance = new Dispatcher();
+            }
         }
+
         return instance;
     }
 
-    Dispatcher(Bus bus) {
-        this.bus = bus;
+    private Dispatcher() {
+        this.bus = new Bus();
     }
 
     public void register(final Object cls) {

@@ -209,4 +209,5 @@ public class ConnectorManage {
     public void cancleRequest(long flag) {
         rQueue.cancelAll(flag);
     }
+
 }

@@ -2,32 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/novel_reader_background_image1"
+
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context=".MainActivity"
     >
 
 
-    <com.reader.widget.selectable.ObservableScrollView
-        android:id="@+id/scroller"
+    <com.reader.widget.ReaderViewpager
+        android:id="@+id/id_viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:fillViewport="true">
+        android:layout_height="match_parent" />
 
-        <com.reader.widget.selectable.SelectableTextView
-            android:id="@+id/main_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:bufferType="spannable"
-            android:text="@string/text"
-            android:lineSpacingMultiplier="1.5"
-            android:textColor="@color/black_deep"
-            android:textSize="@dimen/text_size_big" />
-    </com.reader.widget.selectable.ObservableScrollView>
+
 
 </LinearLayout>

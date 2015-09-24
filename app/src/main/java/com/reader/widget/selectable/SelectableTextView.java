@@ -1045,7 +1045,6 @@ public class SelectableTextView extends TextView {
             word = content.subSequence(start, end).toString();
             if (!"".equals(word)) {
                 showSelectionControls(start, end);
-//              Selection.setSelection(content, start, end);// ���õ�ǰ���н�����ı��ֶε�ѡ��Χ,��ǰ�ı�������н��㣬����˷�����Ч
             }
         }
         return word;

@@ -16,7 +16,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         this.mContext = getBaseContext();
-        PgyCrashManager.register(this, "66a0cbb2f41686b59a52833aa45d0442");
+        PgyCrashManager.register(this, "1f88b99df1b284c9a1614a1cd4fbd8ea");
         LogUtils.configAllowLog = Config.DEBUG;
     }
 }

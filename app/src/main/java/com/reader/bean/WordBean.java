@@ -11,9 +11,9 @@ public class WordBean {
     private String key;
     private String audio;
     private String pron;  //音标
-    private List<sent> listSent  = new ArrayList<>();
+    private List<sent> listSent = new ArrayList<>();
 
-    class sent{
+    class sent {
         private String number;
         private String orig;
         private String trans;

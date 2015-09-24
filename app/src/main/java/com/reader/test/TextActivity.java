@@ -10,6 +10,7 @@ import com.apkfuns.logutils.LogUtils;
 import com.reader.R;
 import com.reader.actions.TranslateActionCreators;
 import com.reader.components.SuperActivity;
+import com.reader.database.SQLdm;
 import com.reader.stores.TodoStore;
 import com.reader.widget.ReaderViewpager;
 import com.reader.widget.selectable.SelectableTextView;
@@ -34,6 +35,7 @@ public class TextActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        new  SQLdm().openDatabase(this);
 
         readerViewpager = (ReaderViewpager) findViewById(R.id.id_viewPager);
         readerViewpager.setAdapter(new PagerAdapter() {

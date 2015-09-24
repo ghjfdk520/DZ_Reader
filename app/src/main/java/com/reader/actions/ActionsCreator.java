@@ -21,7 +21,7 @@ public abstract class ActionsCreator {
 //    }
 
 
-    //public  abstract   ActionsCreator getInstance();
+ //   public  abstract ActionsCreator getInstance();
 
     //销毁actionCreators
     public abstract void destory();

@@ -20,15 +20,15 @@ public class ITableWorker {
 
     protected ITableWorker( Context context )
     {
-        sqlhelp = SQLiteHelper.getInstance( context );
-        db = sqlhelp.getWritableDatabase( );
+      //  sqlhelp = SQLiteHelper.getInstance( context );
+        db = SQLdm.getDatebase();
     }
     protected ITableWorker( Context context , String keyId , String tb_name )
     {
         this.KEY_ID = keyId;
         this.TB_NAME = tb_name;
-        sqlhelp = SQLiteHelper.getInstance( context );
-        db = sqlhelp.getWritableDatabase( );
+       // sqlhelp = SQLiteHelper.getInstance( context );
+        db = SQLdm.getDatebase();
     }
     /**
      * 查找数据

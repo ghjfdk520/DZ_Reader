@@ -1,6 +1,7 @@
 package com.reader.database;
 
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -8,11 +9,10 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by DongZ on 2015/9/24.
  */
 public class SQLiteHelper extends SQLiteOpenHelper {
-    private final static String DATABASE_NAME = "DongZ.db";
+    private final static String DATABASE_NAME = "DongZ.db3";
     private static SQLiteHelper db;
 
     private static final int VERSION = 1;
-    private static final String TABLE_NAME_USER = "user";
 
     private SQLiteHelper( Context context )
     {
@@ -32,11 +32,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-//        try {
-//          //  db.execSQL(UserWorker.tableSql);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        try {
+           db.execSQL(DistWorker.tableSql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

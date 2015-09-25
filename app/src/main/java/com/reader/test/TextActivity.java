@@ -35,7 +35,7 @@ public class TextActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new  SQLdm().openDatabase(this);
+        new  SQLdm(this).openDatabase();
 
         readerViewpager = (ReaderViewpager) findViewById(R.id.id_viewPager);
         readerViewpager.setAdapter(new PagerAdapter() {
@@ -57,12 +57,13 @@ public class TextActivity extends SuperActivity {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
 
-                View view = LayoutInflater.from(TextActivity.this).inflate(R.layout.acitivity_translate,null);
-                readerViewpager.setObjectForPosition(view,position);
+                View view = LayoutInflater.from(TextActivity.this).inflate(R.layout.acitivity_translate, null);
+                readerViewpager.setObjectForPosition(view, position);
                 container.addView(view);
                 return view;
             }
         });
+
 
 //        mTextView = (SelectableTextView) findViewById(R.id.main_text);
 //        // mTextView.setDefaultSelectionColor(0x40FF00FF);
@@ -99,6 +100,8 @@ public class TextActivity extends SuperActivity {
 //                Toast.makeText(TextActivity.this,subText,Toast.LENGTH_SHORT).show();
 //            }
 //        });
+
+
     }
 
     private void showSelectionCursors(int x, int y) {

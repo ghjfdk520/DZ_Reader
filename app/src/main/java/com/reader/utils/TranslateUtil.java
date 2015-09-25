@@ -8,7 +8,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
-import com.reader.common.BaseApplication;
+import com.reader.components.BaseApplication;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -43,6 +43,7 @@ public abstract class SuperActivity extends Activity{
     protected void onResume() {
         super.onResume();
         dispatcher.register(this);
+        if(store != null)
         dispatcher.register(store);
     }
 
@@ -50,6 +51,7 @@ public abstract class SuperActivity extends Activity{
     protected void onPause() {
         super.onPause();
         dispatcher.unregister(this);
+        if(store != null)
         dispatcher.unregister(store);
         //actionsCreator.destory();
     }

@@ -11,7 +11,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.apkfuns.logutils.LogUtils;
 import com.google.gson.Gson;
-import com.reader.common.BaseApplication;
+import com.reader.components.BaseApplication;
 import com.reader.utils.CommonUtil;
 import com.reader.utils.Utils;
 
